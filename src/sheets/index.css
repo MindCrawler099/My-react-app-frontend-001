@@ -1,0 +1,14 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+#postcommentpage-div{
+    width:100vw;
+    min-height:100vh;
+    max-height: fit-content;
+    
+    display:grid;
+    grid-template-rows:max-content auto max-content;
+}
