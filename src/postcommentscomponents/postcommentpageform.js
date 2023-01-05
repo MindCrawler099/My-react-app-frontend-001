@@ -2,7 +2,19 @@ const PostCommentPageForm=({currentTitle,setCurrentTitle})=>{
     return(
         <form id="postcommentform-form" onSubmit={(e)=>{
             e.preventDefault();
-            console.log(currentTitle);
+            
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange=()=>{
+                if(xhr.readyState===4 && xhr.status===200){
+                    console.log(JSON.parse(xhr.response));
+                }
+            }
+            xhr.open('POST','http://localhost:4000/postcomment',true);
+            xhr.setRequestHeader('Content-Type','application/json;charset=UTF-8');
+            xhr.send(JSON.stringify({
+                title:currentTitle,
+                text:'Your fat ass'
+            }))
         }}>
             <label htmlFor="">Title: </label>
             <input type="text" id="" onChange={(e)=>{

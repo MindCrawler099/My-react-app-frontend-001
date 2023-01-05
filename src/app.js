@@ -3,12 +3,12 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import PostCommentPage from "./maincomponents/postcommentpage";
 
 const App = ()=>{
-    const [currentTitle,setCurrentTitle] = useState('Dave');
+    const [currentTitle,setCurrentTitle] = useState('');
     const hasBeenRan = useRef(false);
     
     useEffect(()=>{
         if(hasBeenRan.current === false){
-            setCurrentTitle('Frankie')
+            setCurrentTitle('')
             console.log('UseEffect Ran');
         return ()=>{
             hasBeenRan.current = true;
