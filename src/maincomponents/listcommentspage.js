@@ -3,12 +3,12 @@ import NavBar from "../lessercomponents/navbar";
 import Footer from "../lessercomponents/footer";
 import ListCommentsPageContent from "../listcommentscomponents/listcommentspagecontent";
 
-const ListCommentsPage=({pagetitle,currentYear,currentTitle,setCurrentTitle,currentText,setCurrentText})=>{
+const ListCommentsPage=({pagetitle,currentYear,currentComments})=>{
     return(
         <div id="listcommentspage-div">
             <Header pagetitle={pagetitle}/>
             <NavBar/>
-            <ListCommentsPageContent currentTitle={currentTitle} setCurrentTitle={setCurrentTitle} currentText={currentText} setCurrentText={setCurrentText}/>
+            <ListCommentsPageContent currentComments={currentComments}/>
             <Footer currentYear={currentYear}/>
         </div>
     )

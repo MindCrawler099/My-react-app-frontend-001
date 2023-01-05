@@ -1,17 +1,22 @@
-const CommentUnit =()=>{
+const CommentUnit =({commentUnitTitle,commentUnitText,commentUnitDate})=>{
     return(
         <div className="commentunit-div">
             <header>
-                <h1>Comment #1</h1>
+                <h1>
+                    {commentUnitTitle}
+                </h1>
             </header>
             <hr/>
             <main>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt sequi veritatis asperiores! Incidunt minus dolor voluptates aliquid temporibus, quos excepturi quisquam, voluptatibus hic ullam eius inventore nostrum libero, laudantium soluta!
+                <p>
+                    {commentUnitText}
                 </p>
             </main>
             <hr/>
             <footer>
-                <h2>2002-01-20 03:14:32</h2>
+                <h2>
+                    {commentUnitDate}
+                </h2>
             </footer>
 
         </div>

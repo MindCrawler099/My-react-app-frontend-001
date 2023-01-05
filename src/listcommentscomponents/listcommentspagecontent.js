@@ -1,14 +1,16 @@
 import CommentUnit from "./commentUnit"
-const ListCommentsPageContent=({currentTitle,setCurrentTitle,currentText,setCurrentText})=>{
+const ListCommentsPageContent=({currentComments})=>{
     return(
         <main id="listcommentspagecontent-main">
-            <CommentUnit/>
-            <CommentUnit/>
-            <CommentUnit/>
-            <CommentUnit/>
-            <CommentUnit/>
-            <CommentUnit/>
-            <CommentUnit/>
+            {
+                currentComments.map((element)=>{
+                    console.log(element);
+                    return(
+                        <CommentUnit commentUnitTitle={element.commenttitle} commentUnitText={element.commenttext} commentUnitDate={element.commenttime}/>
+                    )
+                })
+            }
+            
         </main>
     )
 }
