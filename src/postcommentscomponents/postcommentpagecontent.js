@@ -1,9 +1,9 @@
 import PostCommentPageForm from './postcommentpageform';
 
-const PostCommentPageContent=()=>{
+const PostCommentPageContent=({currentTitle,setCurrentTitle})=>{
     return(
         <main>
-            <PostCommentPageForm/>
+            <PostCommentPageForm currentTitle={currentTitle} setCurrentTitle={setCurrentTitle}/>
         </main>
     )
 }

@@ -12,3 +12,15 @@
     display:grid;
     grid-template-rows:max-content auto max-content;
 }
+
+#postcommentform-form{
+    width:60%;
+    margin:0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#postcommentform-form>*{
+    width:100%;
+}
