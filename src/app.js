@@ -4,12 +4,14 @@ import PostCommentPage from "./maincomponents/postcommentpage";
 
 const App = ()=>{
     const [currentTitle,setCurrentTitle] = useState('');
+    const [currentText,setCurrentText] = useState('');
+
     const hasBeenRan = useRef(false);
     
     useEffect(()=>{
         if(hasBeenRan.current === false){
-            setCurrentTitle('')
-            console.log('UseEffect Ran');
+            setCurrentTitle('');
+            setCurrentText('');
         return ()=>{
             hasBeenRan.current = true;
             }
@@ -20,7 +22,7 @@ const App = ()=>{
             <BrowserRouter>
                 <Routes>
                     <Route exact path="/" element={
-                        <PostCommentPage pagetitle="Post Comment" currentYear = {(new Date()).getFullYear()} currentTitle={currentTitle} setCurrentTitle={setCurrentTitle}/>
+                        <PostCommentPage pagetitle="Post Comment" currentYear = {(new Date()).getFullYear()} currentTitle={currentTitle} setCurrentTitle={setCurrentTitle} currentText={currentText} setCurrentText={setCurrentText}/>
                     } />
                 </Routes>
             </BrowserRouter>

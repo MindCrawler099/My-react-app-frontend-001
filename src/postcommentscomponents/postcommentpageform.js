@@ -1,4 +1,4 @@
-const PostCommentPageForm=({currentTitle,setCurrentTitle})=>{
+const PostCommentPageForm=({currentTitle,setCurrentTitle,currentText,setCurrentText})=>{
     return(
         <form id="postcommentform-form" onSubmit={(e)=>{
             e.preventDefault();
@@ -13,7 +13,7 @@ const PostCommentPageForm=({currentTitle,setCurrentTitle})=>{
             xhr.setRequestHeader('Content-Type','application/json;charset=UTF-8');
             xhr.send(JSON.stringify({
                 title:currentTitle,
-                text:'Your fat ass'
+                text:currentText
             }))
         }}>
             <label htmlFor="">Title: </label>
@@ -21,7 +21,9 @@ const PostCommentPageForm=({currentTitle,setCurrentTitle})=>{
             setCurrentTitle(e.target.value);
         }} value={currentTitle}/>
             <label htmlFor="">Comment: </label>
-            <textarea id="" cols="30" rows="10"></textarea>
+            <textarea id="" cols="30" rows="10" onChange={(e)=>{
+                setCurrentText(e.target.value);
+            }} value={currentText}></textarea>
             <input type="submit" value="Post" />
         </form>
     )
