@@ -9,11 +9,13 @@ const PostCommentPageForm=({currentTitle,setCurrentTitle,currentText,setCurrentT
                     console.log(JSON.parse(xhr.response));
                 }
             }
+            const currentTime = new Date()
             xhr.open('POST','http://localhost:4000/postcomment',true);
             xhr.setRequestHeader('Content-Type','application/json;charset=UTF-8');
             xhr.send(JSON.stringify({
                 title:currentTitle,
-                text:currentText
+                text:currentText,
+                time:`${currentTime.getFullYear()}-${((currentTime.getMonth()+1)<10)?"0"+(currentTime.getMonth()+1).toString():(currentTime.getMonth()+1).toString()}-${((currentTime.getDay()+1)<10)?"0"+(currentTime.getDay()+1).toString():(currentTime.getDay()+1).toString()} ${currentTime.getHours()}:${currentTime.getMinutes()}:${((currentTime.getSeconds())<10)?"0"+(currentTime.getSeconds()).toString():(currentTime.getSeconds()).toString()}`
             }))
         }}>
             <label htmlFor="">Title: </label>
