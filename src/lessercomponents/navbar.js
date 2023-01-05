@@ -4,12 +4,12 @@ const NavBar=()=>{
         <nav>
             <ul>
                 <li>
-                    <Link to="/postcomment">
+                    <Link className="navbar-link" to="/postcomment">
                         Post Comment
                     </Link>
                 </li>
                 <li>
-                    <Link to="/listcomments">
+                    <Link className="navbar-link" to="/listcomments">
                         Show Comments
                     </Link>
                 </li>

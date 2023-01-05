@@ -1,6 +1,8 @@
 const Footer =({currentYear})=>{
     return(
-        <footer>{currentYear}</footer>
+        <footer>
+            <h2>{currentYear}</h2>
+        </footer>
     )
 }
 

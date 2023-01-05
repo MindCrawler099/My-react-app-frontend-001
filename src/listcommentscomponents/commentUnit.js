@@ -14,9 +14,9 @@ const CommentUnit =({commentUnitTitle,commentUnitText,commentUnitDate})=>{
             </main>
             <hr/>
             <footer>
-                <h2>
+                <h3>
                     {commentUnitDate}
-                </h2>
+                </h3>
             </footer>
 
         </div>

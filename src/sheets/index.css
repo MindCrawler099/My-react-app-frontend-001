@@ -13,6 +13,73 @@
     grid-template-rows:max-content max-content auto max-content;
 }
 
+nav{
+    height:2em;
+    background-color: black;
+}
+
+nav,nav>ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+nav>ul>li{
+    list-style-type: none;
+}
+
+.navbar-link{
+    margin: 1.5em 1.5em;
+    text-decoration: none;
+    color:white;
+}
+
+#postcommentpage-div>header{
+    padding: 1.3em;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: lightslategray;
+}
+
+#listcommentspage-div>header{
+    padding: 1.3em;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: lightslategray;
+}
+
+#postcommentpage-div>header>h1,#postcommentpage-div>footer>h2{
+    color:white;
+}
+
+
+#listcommentspage-div>header>h1,#listcommentspage-div>footer>h2{
+    color:white;
+}
+
+#postcommentpage-div>footer{
+    padding:0.75em;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: lightslategray;
+}
+
+#listcommentspage-div>footer{
+    padding:0.75em;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: lightslategray;
+}
+
 #postcommentform-form{
     width:60%;
     margin:0px auto;
@@ -32,5 +99,89 @@
 }
 
 .commentunit-div{
+    margin:2ch 0ch;
     width:60%;
+    display: grid;
+    grid-template-rows: max-content 0.1ch 6rem 0.1ch max-content;
+}
+
+#postcommentpage-div>main,#listcommentspagecontent-main{
+    background-color: rgb(206, 219, 226);
+}
+
+#postcommentform-form{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#postcommentform-form *{
+    margin: 0.2em 0ch;
+}
+
+#postcommentform-form label{
+    font-size: 1.2rem;
+}
+
+#postcommentform-form input{
+    height:1.6rem;
+}
+#postcommentform-form input, #postcommentform-form textarea{
+    border:none;
+    outline:none;
+    border:2px solid black;
+    font-size: 1.3rem;
+}
+
+#postcommentform-form input[type=submit]{
+    width:50%;
+    margin: 1em 0ch;
+    height:2em;
+    font-size: 1.2rem;
+    background-color: black;
+    color:white;
+    border:none;
+    vertical-align: middle;
+    line-height: 2em;
+}
+
+#nopostserror-p{
+    margin:1.3em;
+    font-size:1.5rem;
+    color: red;
+}
+
+.commentunit-div{
+    padding:1.2em;
+    border-radius: 0.6em;
+    border:0.1em solid black;
+}
+
+.commentunit-div>header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.commentunit-div>main{
+    
+    text-overflow: ellipsis;
+    overflow-y: scroll;
+}
+
+.commentunit-div>main>p{
+    width:100%;
+    font-size: 1.2rem;
+    display:-webkit-box;
+    -webkit-line-clamp: 3;
+}
+
+.commentunit-div>footer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }

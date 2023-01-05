@@ -1,18 +1,21 @@
 import CommentUnit from "./commentUnit"
 const ListCommentsPageContent=({currentComments})=>{
-    return(
-        <main id="listcommentspagecontent-main">
-            {
-                currentComments.map((element)=>{
-                    console.log(element);
+                if(currentComments.length===0){
                     return(
-                        <CommentUnit commentUnitTitle={element.commenttitle} commentUnitText={element.commenttext} commentUnitDate={element.commenttime}/>
+                        <main id="listcommentspagecontent-main">
+                        <p id="nopostserror-p">No Posts Recieved</p>
+                        </main>
                     )
-                })
+                }else{
+                    return(<main id="listcommentspagecontent-main">
+                    {currentComments.map((element)=>{
+                        return(
+                            <CommentUnit key={element.commentid} commentUnitTitle={element.commenttitle} commentUnitText={element.commenttext} commentUnitDate={element.commentdate}/>
+                        )
+                    })}
+                    </main>
+                    )
+                }
             }
-            
-        </main>
-    )
-}
 
 export default ListCommentsPageContent
